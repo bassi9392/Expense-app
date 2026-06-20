@@ -1,0 +1,151 @@
+SUPPORTDESK SECURITY & COMPLIANCE GUIDE
+========================================
+Version 2.1 | Updated: March 2024
+
+SECTION 1 — AUTHENTICATION & ACCESS CONTROL
+=============================================
+
+Single Sign-On (SSO)
+---------------------
+- SAML 2.0 and OAuth 2.0 supported (Professional and Enterprise plans).
+- Supported identity providers: Okta, Azure AD, Google Workspace, OneLogin, Ping Identity.
+- Configuration: Settings → Security → SSO → Configure.
+- Once SSO is enabled, all users (except the account owner) must log in via SSO.
+- Emergency bypass code available for account owners in case of IdP outage.
+
+Session Management
+------------------
+- Default session timeout: 8 hours of inactivity.
+- Configurable to: 30 minutes, 1 hour, 4 hours, 8 hours, 24 hours, or Never.
+- Concurrent sessions: unlimited by default; can be limited to 1 per user (Enterprise).
+- View active sessions: Account Settings → Security → Active Sessions → Revoke All.
+
+Role-Based Access Control (RBAC)
+----------------------------------
+Roles available:
+  Owner       — Full admin access; billing; can delete account.
+  Admin       — User management; settings; cannot access billing.
+  Agent       — Create, view, and resolve tickets assigned to them.
+  Viewer      — Read-only access to tickets and reports. No editing.
+
+Custom roles available on Enterprise plan.
+
+---
+
+SECTION 2 — API SECURITY
+==========================
+
+API Key Management
+------------------
+- Generate API keys: Dashboard → Settings → API Keys → Generate New Key.
+- Key types:
+    Read-only key  — GET endpoints only.
+    Read-write key — GET and POST/PUT/DELETE endpoints.
+    Admin key      — All endpoints including user management.
+- Keys can be scoped to specific IP ranges for additional security.
+- Automatic key rotation available (rotate every 30/60/90 days).
+- Maximum 10 active API keys per account (Enterprise: unlimited).
+
+OAuth 2.0 for Third-Party Apps
+--------------------------------
+- Authorization Code flow supported for web applications.
+- Client Credentials flow supported for server-to-server integrations.
+- Token endpoint: https://auth.supportdesk.io/oauth/token
+- Scopes: read:tickets, write:tickets, read:users, write:users, admin:all
+- Access tokens expire after 1 hour; use refresh tokens for long-lived access.
+
+---
+
+SECTION 3 — DATA ENCRYPTION
+=============================
+
+In Transit
+----------
+- All data in transit is encrypted with TLS 1.3 (minimum TLS 1.2 accepted).
+- HTTP Strict Transport Security (HSTS) enforced.
+- Certificate Authority: DigiCert (EV SSL).
+- Public key pinning enabled for mobile apps.
+
+At Rest
+-------
+- Database encryption: AES-256.
+- File attachments: AES-256 encrypted in object storage.
+- Encryption keys managed via AWS KMS.
+- Key rotation: every 12 months.
+
+---
+
+SECTION 4 — COMPLIANCE CERTIFICATIONS
+=======================================
+
+Current Certifications
+-----------------------
+- SOC 2 Type II (annual audit — last completed: November 2023)
+- ISO 27001:2022
+- GDPR Compliant (DPA available on request)
+- HIPAA Business Associate Agreement (BAA) available — Enterprise only
+- PCI DSS Level 3 (no card data stored; payment processed via Stripe)
+- CCPA Compliant
+
+Audit Reports
+-------------
+- SOC 2 Type II report available under NDA for Enterprise customers.
+- Request via: security@supportdesk.io
+
+---
+
+SECTION 5 — VULNERABILITY REPORTING
+=====================================
+
+Responsible Disclosure
+-----------------------
+- Report vulnerabilities to: security@supportdesk.io
+- PGP key available at: https://supportdesk.io/.well-known/security.txt
+- We aim to acknowledge reports within 24 hours and resolve within 90 days.
+- We do not pursue legal action against researchers acting in good faith.
+- Bug bounty programme: https://bugcrowd.com/supportdesk
+
+Severity Classification
+------------------------
+Critical: Remote code execution, authentication bypass, data exfiltration.
+High:     Privilege escalation, stored XSS, IDOR across accounts.
+Medium:   Reflected XSS, CSRF, information disclosure.
+Low:      Missing security headers, outdated library versions.
+
+---
+
+SECTION 6 — INCIDENT RESPONSE
+===============================
+
+Process
+-------
+1. Detection & Alerting — automated monitoring via Datadog and PagerDuty.
+2. Triage — security team assesses severity within 15 minutes of alert.
+3. Containment — affected systems isolated; impacted customers notified.
+4. Investigation & Eradication — root-cause analysis and remediation.
+5. Recovery — services restored; post-incident report published within 5 business days.
+
+Customer Notification
+----------------------
+- Data breaches affecting customer data: notified within 72 hours (GDPR requirement).
+- Notifications sent to: the account's primary email and security contact (if configured).
+- Set a security contact: Settings → Security → Security Contact Email.
+
+---
+
+SECTION 7 — PENETRATION TESTING
+=================================
+
+- External pen test conducted annually by Bishop Fox.
+- Latest report summary available to Enterprise customers under NDA.
+- Customers may conduct their own pen tests with prior written approval.
+  Request at: security@supportdesk.io (5 business days notice required).
+
+---
+
+CONTACT
+========
+Security Team:    security@supportdesk.io
+Privacy Team:     privacy@supportdesk.io
+Compliance:       compliance@supportdesk.io
+Trust Page:       https://trust.supportdesk.io

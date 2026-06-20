@@ -1,0 +1,152 @@
+SUPPORTDESK — GENERAL FAQ & TROUBLESHOOTING
+===========================================
+
+ACCOUNT MANAGEMENT
+==================
+
+Q: How do I create a new account?
+A: Go to https://app.supportdesk.io/signup. Enter your work email, create a password,
+   and verify your email address. Your free account is immediately active after verification.
+
+Q: How do I invite team members?
+A: From your Dashboard, go to Settings → Team → Invite Members. Enter the email addresses
+   of your teammates. They will receive an invitation link valid for 48 hours.
+
+Q: How do I reset my password?
+A: Click "Forgot Password" on the login page. Enter your registered email address.
+   You will receive a password-reset link within 2 minutes. The link expires after 30 minutes.
+   If you don't see the email, check your spam folder or contact support.
+
+Q: Can I change my account email address?
+A: Yes. Go to Account Settings → Profile → Email. You must verify the new email address.
+   The change takes effect after verification. Note: your old email stops working immediately.
+
+Q: How do I enable Two-Factor Authentication (2FA)?
+A: Go to Account Settings → Security → Two-Factor Authentication → Enable.
+   Scan the QR code with an authenticator app (Google Authenticator, Authy, or 1Password).
+   Save your backup codes in a secure location.
+
+Q: I'm locked out of my account. What should I do?
+A: If 2FA is blocking you: use one of your backup codes. If you've lost backup codes,
+   contact support@supportdesk.io from your registered email address for account recovery.
+   Recovery typically takes 1–2 business days for identity verification.
+
+---
+
+INTERFACE & BROWSER ISSUES
+===========================
+
+Q: The dashboard isn't loading. What should I do?
+A: Try these steps in order:
+   1. Clear your browser's cache and cookies (Settings → Privacy → Clear Browsing Data).
+   2. Try a different browser (Chrome, Firefox, or Edge).
+   3. Disable browser extensions, especially ad-blockers or script-blockers.
+   4. Check your internet connection.
+   5. Visit https://status.supportdesk.io to see if there's an ongoing outage.
+   6. If none of the above works, contact support@supportdesk.io with a screenshot.
+
+Q: The interface is loading slowly.
+A: Slow loading is usually caused by:
+   - A slow internet connection (run a speed test at fast.com)
+   - A large number of open browser tabs consuming memory
+   - Outdated browser version — update your browser to the latest version
+   - Peak usage hours (9 AM – 11 AM EST) — performance typically improves after 11 AM
+
+Q: I see a blank white screen after logging in.
+A: This is usually a JavaScript loading error. Steps to fix:
+   1. Hard-refresh the page: Ctrl+Shift+R (Windows/Linux) or Cmd+Shift+R (Mac).
+   2. Clear all site data in browser settings.
+   3. Try Incognito/Private mode.
+   4. If the problem persists, report the browser console error to our support team.
+
+Q: Buttons or forms are not responding to clicks.
+A: Try disabling browser extensions one by one to identify any conflicts.
+   Also ensure JavaScript is enabled in your browser settings.
+
+---
+
+TICKET MANAGEMENT
+==================
+
+Q: How do I create a new support ticket?
+A: Click the blue "+ New Ticket" button in the top-right corner of any page.
+   Fill in the subject, description, priority, and attach any relevant files.
+   Click "Submit Ticket" to create it.
+
+Q: How do I track the status of my ticket?
+A: All your tickets are listed under "My Tickets" in the left sidebar.
+   Status indicators: Open (blue), In Progress (yellow), Resolved (green), Closed (grey).
+
+Q: How do I reopen a resolved ticket?
+A: Open the resolved ticket and click the "Reopen" button at the bottom.
+   Add a comment explaining why you're reopening it.
+
+Q: Can I attach files to a ticket?
+A: Yes. Supported formats: PDF, PNG, JPG, GIF, MP4, ZIP, CSV, XLSX, DOCX.
+   Maximum file size: 25 MB per file, 100 MB total per ticket.
+
+Q: How do I set ticket priority?
+A: When creating or editing a ticket, select from: Low, Medium, High, or Critical.
+   Critical tickets receive a response within 1 hour during business hours.
+
+---
+
+INTEGRATIONS
+============
+
+Q: Which tools does SupportDesk integrate with?
+A: Natively: Slack, Microsoft Teams, Jira, GitHub, Zendesk, Salesforce, HubSpot.
+   Via Zapier: 5,000+ additional tools.
+   Via API: Any platform with REST API capability.
+
+Q: How do I connect Slack?
+A: Go to Settings → Integrations → Slack → Connect.
+   Authorize the SupportDesk Slack app in your workspace.
+   Choose which channels should receive ticket notifications.
+
+Q: How do I connect Jira?
+A: Go to Settings → Integrations → Jira → Connect.
+   Enter your Jira domain (e.g., yourcompany.atlassian.net).
+   Provide an API token from your Atlassian account.
+   Select the Jira project to sync tickets with.
+
+---
+
+DATA & SECURITY
+===============
+
+Q: Where is my data stored?
+A: Data is stored in ISO 27001-certified data centres in the US (primary) and EU (backup).
+   Encryption at rest (AES-256) and in transit (TLS 1.3) is applied to all data.
+
+Q: Can I export all my data?
+A: Yes. Go to Account Settings → Data → Export All Data.
+   You'll receive a download link via email within 2 hours for small accounts,
+   or within 24 hours for accounts with more than 10,000 tickets.
+
+Q: Does SupportDesk comply with GDPR?
+A: Yes. SupportDesk is fully GDPR-compliant. We offer a Data Processing Agreement (DPA)
+   for Enterprise customers. Contact privacy@supportdesk.io to request the DPA.
+
+Q: How do I delete my account and all data?
+A: Go to Account Settings → Danger Zone → Delete Account.
+   All data is permanently deleted within 30 days as per our data retention policy.
+   This action is irreversible. Download your data export before deleting.
+
+---
+
+CONTACT & SUPPORT HOURS
+========================
+General Support Email: support@supportdesk.io
+Billing Email:         billing@supportdesk.io
+Security Issues:       security@supportdesk.io
+Privacy:               privacy@supportdesk.io
+
+Support Hours:
+- Free Plan:         Email only (response within 3 business days)
+- Standard Plan:     Email + Chat (Mon–Fri, 9 AM – 6 PM EST)
+- Professional Plan: Email + Chat priority (Mon–Fri, 8 AM – 8 PM EST)
+- Enterprise Plan:   24/7 phone, email, and chat
+
+Status Page: https://status.supportdesk.io
+Knowledge Base: https://help.supportdesk.io
